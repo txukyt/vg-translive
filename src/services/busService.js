@@ -3,7 +3,7 @@ const https = require("https");
 
 async function obtenerTiemposAutobuses(paradaId) {
     try {
-        const url = `https://dwww.vitoria-gasteiz.org/j16-02w/detalleAction.do?accion=CONSULTA_PARADAS&charset=UTF-8&idParada=${paradaId}`;
+        const url = `https://www.vitoria-gasteiz.org/j16-02w/detalleAction.do?accion=CONSULTA_PARADAS&charset=UTF-8&idParada=${paradaId}`;
         const httpsAgent = new https.Agent({ rejectUnauthorized: false }); // Desactiva la verificación
         const response = await axios.get(url, { httpsAgent });
         return response.data;
